@@ -13,6 +13,7 @@ import '../widgets/task_list_widget.dart';
 import '../widgets/subject_breakdown.dart';
 import '../widgets/surface_card.dart';
 import '../widgets/glass_note_widget.dart';
+import '../widgets/live_clock_widget.dart';
 import '../widgets/page_transition.dart';
 
 class DashboardPage extends ConsumerWidget {
@@ -140,6 +141,10 @@ class _DashboardHeader extends ConsumerWidget {
               ),
             ],
           ),
+        ),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: LiveClockWidget(),
         ),
         streak.when(
           data: (s) => s > 0
